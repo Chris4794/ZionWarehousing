@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="zh-hk">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>鹹酥雞訂購 - 示範</title>
+<title>MWO基金會員系統</title>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
@@ -46,41 +46,43 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <div class="container">
 <div class="row">
 <div class="col-lg-12 text-center">
-<h1 class="mt-5">哈嚕 我是鹹酥雞老闆</h1>
-<p class="lead">請問你要吃蝦米勒!</p>
+<h1 class="mt-5">歡迎光臨多頻震盪器（Multiple Wave Oscillator）會員註冊系統</h1>
+<!-- <p class="lead">請問你要吃蝦米勒!</p> -->
 <ul class="list-unstyled">
 <li class="col-xs-6">
-<img class="img-responsive" src="./img/鹹酥雞.jpg" alt="">
-<h2>鹹酥雞</h2>
-<p>NT.50</p>
+<!-- <img class="img-responsive" src="./img/鹹酥雞.jpg" alt=""> -->
+<h2>國家地區</h2>
+<!-- <p>NT.50</p> -->
 <select name="number" class="select form-control" data-price="50" data-name="鹹酥雞">
-<option style="display:none" value="">請選擇數量</option>
-<option value="1">1份</option>
-<option value="2">2份</option>
-<option value="3">3份</option>
-<option value="4">4份</option>
-<option value="5">5份</option>
-<option value="6">6份</option>
-<option value="7">7份</option>
-<option value="8">8份</option>
-<option value="9">9份</option>
+<option style="display:none" value="">請選擇國家地區</option>
+<option value="1">中國內地</option>
+<option value="2">香港</option>
+<option value="3">台灣</option>
+<option value="4">馬來西亞</option>
+<option value="5">新加坡</option>
+<option value="6">加拿大</option>
+<option value="7">美國</option>
+<option value="8">韓國</option>
+<option value="9">日本</option>
 </select>
 </li>
+</ul>
+<ul class="list-unstyled">
 <li class="col-xs-6">
-<img class="img-responsive" src="./img/由於.JPG" alt="">
-<h2>魷魚</h2>
-<p>NT.50</p>
+<!-- <img class="img-responsive" src="./img/由於.JPG" alt=""> -->
+<h2>人數</h2>
+<!-- <p>NT.50</p> -->
 <select name="number" class="select form-control" data-price="50" data-name="魷魚">
 <option style="display:none" value="">請選擇數量</option>
-<option value="1">1份</option>
-<option value="2">2份</option>
-<option value="3">3份</option>
-<option value="4">4份</option>
-<option value="5">5份</option>
-<option value="6">6份</option>
-<option value="7">7份</option>
-<option value="8">8份</option>
-<option value="9">9份</option>
+<option value="1">1人</option>
+<option value="2">2人</option>
+<option value="3">3人</option>
+<option value="4">4人</option>
+<option value="5">5人</option>
+<option value="6">6人</option>
+<option value="7">7人</option>
+<option value="8">8人</option>
+<option value="9">9人</option>
 </select>
 </li>
 </ul>
@@ -93,14 +95,18 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <input type="number" class="form-control" id="phone">
 </div>
 <div class="form-group col-xs-12">
-<button type="button" id="sendOrder" class="btn btn-primary col-xs-12">送出訂單</button>
+<label for="pwd">郵寄地址:</label>
+<input type="text" class="form-control" id="address">
 </div>
-<div class="col-xs-12 text-center"><a href="./friedQuery.html">查詢訂單</a></div>
-<div class="col-xs-12 text-center">純屬線上訂購 demo</div>
+<div class="form-group col-xs-12">
+<button type="button" id="sendOrder" class="btn btn-primary col-xs-12">註冊</button>
+</div>
+<!-- <div class="col-xs-12 text-center"><a href="./friedQuery.html">查詢訂單</a></div> -->
+<div class="col-xs-12 text-center">純屬 demo</div>
 </div>
 </div>
 </div>
-<div id="footer">製作 by <a href="https://iandays.com" target="_blank">Ian Chu.</a></div>
+<!-- <div id="footer">製作 by <a href="https://iandays.com" target="_blank">Ian Chu.</a></div> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
