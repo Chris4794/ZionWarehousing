@@ -75,7 +75,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <!-- <img class="img-responsive" src="./img/由於.JPG" alt=""> -->
 <h2>人數</h2>
 <!-- <p>NT.50</p> -->
-<select name="presons" class="select form-control" data-price="50" data-name="人數">
+<select name="persons" class="select form-control" data-price="50" data-name="人數">
 <option style="display:none" value="">請選擇人數</option>
 <option value="1">1人</option>
 <option value="2">2人</option>
@@ -120,15 +120,15 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
         var name = $('#name').val();
         var phone = $('#phone').val();
         var address = $('#address').val();
-        var order = '';
-        var price = 0;
+        var nation = '';
+        var persons = '';
         $('input').focus(function(){
           $(this).css('border','');
         });
         $('.select').each(function(index) {
           if($(this).val() !== ''){
-            order += $(this).data('name') + ' - ' + $(this).val() + '份 \n';
-            price += Number($(this).data('price')) * Number($(this).val());
+            nation = $(this).data('nation') ;
+            persons = $(this).data('persons') ;
           }
         });
         order = order.substring(0, order.length - 1);
@@ -162,8 +162,8 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
             'phone':phone,
             'address':address,
             'time': filltime,
-            'order': order,
-            'price': price,
+            'nation': nation,
+            'persons': persons,
           }
           send(data);
         }
