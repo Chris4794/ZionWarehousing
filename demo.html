@@ -55,7 +55,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <!-- <img class="img-responsive" src="./img/鹹酥雞.jpg" alt=""> -->
 <h2>國家地區</h2>
 <!-- <p>NT.50</p> -->
-<select name="nation" class="select form-control" data-price="50" data-name="國家地區">
+<select name="nation" class="select form-control" data-name="國家地區">
 <option style="display:none" value="">請選擇國家地區</option>
 <option value="中國內地">中國內地</option>
 <option value="香港">香港</option>
@@ -140,11 +140,11 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
           $('#phone').css('border','1px solid #ff0000');
           status = false;
         }
-        if(phone == ''){
+        if(address == ''){
           $('#address').css('border','1px solid #ff0000');
           status = false;
         }
-        if(order == ''){
+        if(nation == ''){
           alert('請輸入註冊資料');
           status = false;
         }
