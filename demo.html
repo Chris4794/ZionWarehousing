@@ -55,17 +55,17 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <!-- <img class="img-responsive" src="./img/鹹酥雞.jpg" alt=""> -->
 <h2>國家地區</h2>
 <!-- <p>NT.50</p> -->
-<select name="number" class="select form-control" data-price="50" data-name="鹹酥雞">
+<select name="nation" class="select form-control" data-price="50" data-name="國家地區">
 <option style="display:none" value="">請選擇國家地區</option>
-<option value="1">中國內地</option>
-<option value="2">香港</option>
-<option value="3">台灣</option>
-<option value="4">馬來西亞</option>
-<option value="5">新加坡</option>
-<option value="6">加拿大</option>
-<option value="7">美國</option>
-<option value="8">韓國</option>
-<option value="9">日本</option>
+<option value="中國內地">中國內地</option>
+<option value="香港">香港</option>
+<option value="台灣">台灣</option>
+<option value="馬來西亞">馬來西亞</option>
+<option value="新加坡">新加坡</option>
+<option value="加拿大">加拿大</option>
+<option value="美國">美國</option>
+<option value="韓國">韓國</option>
+<option value="日本">日本</option>
 </select>
 </li>
 </ul>
@@ -75,7 +75,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 <!-- <img class="img-responsive" src="./img/由於.JPG" alt=""> -->
 <h2>人數</h2>
 <!-- <p>NT.50</p> -->
-<select name="number" class="select form-control" data-price="50" data-name="魷魚">
+<select name="presons" class="select form-control" data-price="50" data-name="人數">
 <option style="display:none" value="">請選擇人數</option>
 <option value="1">1人</option>
 <option value="2">2人</option>
@@ -118,7 +118,8 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
         $('#sendOrder').click(function(e){
         var status = true;
         var name = $('#name').val();
-        var phone = $('#phone').val();   
+        var phone = $('#phone').val();
+        var address = $('#address').val();
         var order = '';
         var price = 0;
         $('input').focus(function(){
@@ -144,7 +145,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
           status = false;
         }
         if(order == ''){
-          alert('請選擇訂購品項喔');
+          alert('請輸入註冊資料');
           status = false;
         }
         if(status){
@@ -159,6 +160,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
           var data = {
             'name' : name,
             'phone':phone,
+            'address':address,
             'time': filltime,
             'order': order,
             'price': price,
