@@ -139,6 +139,10 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
           $('#phone').css('border','1px solid #ff0000');
           status = false;
         }
+        if(phone == ''){
+          $('#address').css('border','1px solid #ff0000');
+          status = false;
+        }
         if(order == ''){
           alert('請選擇訂購品項喔');
           status = false;
@@ -166,12 +170,12 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
     function send(data){
       $.ajax({
         type: "get",
-        url: "https://script.google.com/macros/s/AKfycbz3fU3FVDmIQehtWX6ecKuV_A67lE64FEQ-ekmOZ_jZDyY96z0/exec",
+        url: "https://script.google.com/macros/s/AKfycbwOSoK0yjMOxlQLY7BJ3jk1E1JsQf7e-kFOjURDbhE0hQg-7VX6/exec",
         data: data,
         dataType: "JSON",
         success: function (response) {
           console.log(response);
-          alert('感謝您的訂購！！');
+          alert('感謝您的支持！！');
         }
       });
     }
