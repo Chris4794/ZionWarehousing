@@ -110,9 +110,9 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
 </div>
 </div>
 <!-- <div id="footer">製作 by <a href="https://iandays.com" target="_blank">Ian Chu.</a></div> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 <script>
     $(function(){
         $('#sendOrder').click(function(e){
@@ -131,7 +131,7 @@ ga('create','UA-111039507-1','auto');ga('send','pageview');</script>
             persons = $(this).data('persons') ;
           }
         });
-        order = order.substring(0, order.length - 1);
+        
         if(name == ''){
           $('#name').css('border','1px solid #ff0000');
           status = false;
