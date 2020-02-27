@@ -2,23 +2,36 @@
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    NO: <input type="text" id="numberInput"><br><br>
-    Name: <input type="text" id="nameInput"><br><br>
-    Score: <input type="text" id="scoreInput"><br><br><br>
+    <h1 class="mt-5">MWO基金會員資料註冊</h1>
+    
+    姓名: <input type="text" id="nameInput"><br><br>
+    國家地區:
+    <select name="nation" class="select form-control" data-name="國家地區" id="nationInput">
+      <option style="display:none" value="">請選擇國家或地區</option>
+      <option value="中國內地">中國內地</option>
+      <option value="香港">香港</option>
+      <option value="台灣">台灣</option>
+      <option value="澳門">澳門</option>
+      <option value="美國">美國</option>
+      <option value="加拿大">加拿大</option>
+      <option value="韓國">韓國</option>
+      <option value="日本">日本</option>
+      <option value="新加坡">新加坡</option>
+    </select><br><br>
+    電郵: <input type="text" id="emailInput"><br><br>
+    郵寄地址: <input type="text" id="addressInput"><br><br><br>
 
-    <input type="button" value="送出" onclick="SendScore()">
+    <input type="button" value="註冊" onclick="SendData()">
     <script type="text/javascript">
-        function SendScore(){
+        function SendData(){
             $.get("https://script.google.com/macros/s/AKfycbwckMdcWPbP89qIplQXUOWq-BOx5fUlNus3HBfNei37nXHv6zI/exec", {
-                        "number": document.getElementById("numberInput").value,
                         "name": document.getElementById("nameInput").value,
-                        "score": document.getElementById("scoreInput").value
+                        "nation": document.getElementById("nationInput").value,
+                        "email": document.getElementById("emailInput").value,
+                        "address": document.getElementById("addressInput").value
                     },
-                    function (data) {
-                        document.write("--------------------------");
-                        document.write("Result = "+data);
-                        document.write("--------------------------");
-                    });
+                  document.write("註冊成功");
+                  );
         }
     </script>
 </body>
