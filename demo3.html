@@ -13,12 +13,12 @@
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <h1 class="mt-5">MWO基金會員資料註冊（個人）</h1>
+    <h1 class="mt-5">MWO基金系統會員資料註冊（團體）</h1>
     
     <br><br><br><br><br>
     
     <div align="left">
-    姓名: <input type="text" id="nameInput">
+    公司或組織名: <input type="text" id="nameInput">
     </div><br><br>
     <div align="left">
     國家地區:<select name="nation" class="select form-control" data-name="國家地區" id="nationInput" style="width:150px;">
@@ -36,9 +36,10 @@
     </div><br><br><br>
     
      電郵: <input type="text" id="emailInput"><br><br>
-     郵寄地址: <input type="text" id="addressInput"><br><br><br>
+     地址: <input type="text" id="addressInput"><br><br><br>
 
     <input type="button" value="註冊" onclick="SendData()">
+    <input type="button" value="返回首頁">
     <script type="text/javascript">
         function SendData(){
             $.get("https://script.google.com/macros/s/AKfycbwckMdcWPbP89qIplQXUOWq-BOx5fUlNus3HBfNei37nXHv6zI/exec", {
@@ -47,8 +48,9 @@
                         "email": document.getElementById("emailInput").value,
                         "address": document.getElementById("addressInput").value
                     },
-                  document.write("註冊成功");
-                  );
+                  function () {
+                      document.write("註冊成功");
+                  });
         }
     </script>
 </body>

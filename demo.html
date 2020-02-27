@@ -1,25 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>MWO demo</title>
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+      
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    NO: <input type="text" id="numberInput"><br><br>
-    Name: <input type="text" id="nameInput"><br><br>
-    Score: <input type="text" id="scoreInput"><br><br><br>
-
-    <input type="button" value="送出" onclick="SendScore()">
-    <script type="text/javascript">
-        function SendScore(){
-            $.get("※你的網址放這邊※", {
-                        "number": document.getElementById("numberInput").value,
-                        "name": document.getElementById("nameInput").value,
-                        "score": document.getElementById("scoreInput").value
-                    },
-                    function (data) {
-                        document.write("--------------------------");
-                        document.write("Result = "+data);
-                        document.write("--------------------------");
-                    });
-        }
-    </script>
+    <h1 class="mt-4">歡迎光臨MWO會員系統</h1>
+    <div align="right">
+    <a href="https://chris4794.github.io/ZionWarehousing/demo2.html">個人註冊</a><br>
+    <a href="https://chris4794.github.io/ZionWarehousing/demo3.html">團體註冊</a><br>
+    <a href="https://chris4794.github.io/ZionWarehousing/demo4.html">捐贈紀錄</a><br>
+    </div><br>
+    
 </body>
 </html>
